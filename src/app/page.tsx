@@ -1,113 +1,161 @@
+import { url } from 'inspector';
 import Image from "next/image";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className='bg-gray-50t text-gray-600'>
+        <header className='container mx-auto px-4 h-24 flex items-center justify-between'>
+          <div className='font-black'>
+            Logo
+          </div>
+          <ul className='flex items-center space-x-3'>
+            <li>
+              <Link href={""} className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Como Reservar</Link>
+            </li>
+
+            <li>
+              <Link href={""} className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Sobre Nós</Link>
+            </li>
+
+            <li>
+              <Link href={""} className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Informações</Link>
+            </li>
+
+            <li>
+              <Link href={""} className='text-sm text-gray-600 hover:text-gray-800 hover:underline'>Contato</Link>
+            </li>
+
+          </ul>
+        </header>
+      </div>
+
+      <div style={{  
+        backgroundImage: "url(" + "/images/hero-image-1.png" + ")",
+        height: 450,
+      }}>
+        <div className='container max-w-5xl mx-auto px-4 h-full flex items-center justify-center'>
+          <div className='container'>
+
+            <div className="text-center">
+              <h1 className='text-gray-200 text-3xl mb-2'>Onde você quer ir?</h1>
+              <p className='text-green-100'>Escolha o estado e cidade para achar os melhores resorts</p>
+            </div>
+
+            <div className='mt-7'>
+              <div className='container mx-auto px-4 flex justify-center'>
+                <form action="" className='grid grid-cols-2 lg:grid-cols-3 gap-4'>
+
+                  <select className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'>
+                    <option value="">Escolha o estado</option>
+                  </select>
+
+                  <select className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'>
+                    <option value="">Escolha a cidade</option>
+                  </select>
+                  
+                  <button className='col-span-2 lg:col-span-1 inline-flex items-center justify-center text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded '>
+                    <svg className='w-4 h-4 mr-2' data-slot="icon" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path clip-rule="evenodd" fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"></path>
+                    </svg>
+                    Pesquisar Resorts
+                  </button>
+                
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className='container mx-auto px-4 py-20'>
+          <div className='flex flex-col-reverse lg:flex-row'>
+            <div className='lg:pr-10'>
+              <div className='text-sm text-gray-400 font-medium'>RESORT EM DESTAQUE</div>
+              <div className='text-2xl'>Ecoresort Praia do Forte Bahia</div>
+              <div className='text-sm text-gray-400 font-medium mt-2'>Hotel Qualidade 5 Estrelas</div>
+              <div className='text-sm text-gray-400 font-medium mt-4'>
+                <p className='mb-4'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <p className='mb-4'>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+                <button className='inline-flex items-center text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded '>
+                  Solicitar Reserva
+                  <svg className='w-4 h-4 ml-2'data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className='flex-shrink-0 lg:ml-auto mb-5 lg:mb-0'>
+              <Image src={"/images/featured-img.png"} width={500} height={500} alt='featured-img' priority={false}></Image>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className='container mx-auto px-4'>
+          <h3 className='text-2xl text-gray-500 font-semibold text-center mb-8'>Conheça mais resorts</h3>
+          <div className='md:grid lg:grid-cols-4 md:grid-rows-2 md:gap-6 space-y-6 md:space-y-0'>
+            <div className='relative md:col-span-2 md:row-span-2 rounded overflow-hidden'>
+              <div className='absolute bottom-0 pl-4 pb-4 text-white font-bold z-20'>Beach Park Resort</div>
+              <Image className='h-20 absolute bottom-0 left-0 right-0 z-10' src={"/images/image-shadow.png"} width={1000} height={1000} alt='image-shadow1'></Image>
+              <Image className='w-full h-full object-cover' src={"/images/hotel-1.jpeg"} width={1000} height={1000} alt='Beach Park Resort' priority={true}></Image>
+            </div>
+            <div className='relative md:col-span-2 h-60 rounded overflow-hidden'>
+              <div className='absolute bottom-0 pl-4 pb-4 text-white font-bold z-20'>Salina do Maragogi Resort</div>
+              <Image className='h-20 absolute bottom-0 left-0 right-0 z-10' src={"/images/image-shadow.png"} width={1000} height={1000} alt='image-shadow2'></Image>
+              <Image className='w-full h-full object-cover' src={"/images/hotel-2.jpeg"} width={1000} height={1000} alt='Salina do Maragogi Resort' priority={false}></Image>
+            </div>
+            <div className='relative rounded overflow-hidden'>
+              <div className='absolute bottom-0 pl-4 pb-4 text-white font-bold z-20'>grand Palladium</div>
+              <Image className='h-20 absolute bottom-0 left-0 right-0 z-10' src={"/images/image-shadow.png"} width={1000} height={1000} alt='image-shadow3'></Image>
+              <Image className='w-full h-full object-cover' src={"/images/hotel-3.jpeg"} width={1000} height={1000} alt='grand Palladium' priority={false}></Image>
+            </div>
+            <div className='relative rounded overflow-hidden'>
+              <div className='absolute bottom-0 pl-4 pb-4 text-white font-bold z-20'>{"Arraial d'Ajuda Eco Resort"}</div>
+              <Image className='h-20 absolute bottom-0 left-0 right-0 z-10' src={"/images/image-shadow.png"} width={1000} height={1000} alt='image-shadow4'></Image>
+              <Image className='w-full h-full object-cover' src={"/images/hotel-4.jpeg"} width={1000} height={1000} alt={"Arraial d'Ajuda Eco Resort"} priority={false}></Image>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <div className='py-20'>
+        <div className='container mx-auto px-4 flex justify-center'>
+          <form action="" className='grid grid-cols-2 lg:grid-cols-3 gap-4'>
+            <select className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'>
+              <option value="">Escolha o estado</option>
+            </select>
+
+            <select className='bg-gray-50 px-3 py-2 border border-gray-300 rounded text-gray-500'>
+              <option value="">Escolha a cidade</option>
+            </select>
+                
+            <button className='col-span-2 lg:col-span-1 inline-flex items-center justify-center text-yellow-900 bg-yellow-500 font-medium px-3 py-2 rounded '>
+              <svg className='w-4 h-4 mr-2' data-slot="icon" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path clip-rule="evenodd" fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"></path>
+              </svg>
+              Pesquisar Resorts
+            </button>
+          </form>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      <div className='border-t border-gray-200'>
+        <div className='container mx-auto p-4 flex items-center justify-between'>
+          <div className='text-gray-400 font-black'>
+            LOGO
+          </div>
+          <div className='flex items-center space-x-3'>
+            <Image className='w-full h-full object-cover' src={"/images/icon-facebook.png"} width={1000} height={1000} alt='icon-facebook'></Image>
+            <Image className='w-full h-full object-cover' src={"/images/icon-instagram.png"} width={1000} height={1000} alt='icon-instagram'></Image>
+          </div>
+        </div>
       </div>
-    </main>
+    </>
   );
 }
