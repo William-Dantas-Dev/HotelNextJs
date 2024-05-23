@@ -28,7 +28,7 @@ const NavMenu = ({ }: {
   const [navbarOpen, setNavbarOpen] = useState(false);
   return (
     <nav className='z-10 bg-opacity-90 bg-white'>
-      <div className='flex flex-wrap items-center justify-between mx-auto px-20 py-4 h-24'>
+      <div className='flex flex-wrap items-center justify-between mx-auto px-8 md:px-20 py-4 h-24'>
         <Link href={"/"} className='text-2xl md:text-3xl text-gray-600 font-semibold'>
           LOGO
         </Link>
